@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:tema/screens/main_page.dart';
 
 import 'const.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         //primarySwatch: Colors.blue,
         scaffoldBackgroundColor: kScaffoldBackgroundColor,
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           backgroundColor: Colors.transparent,
           elevation: 0,
           //scrolledUnderElevation: 0.5,

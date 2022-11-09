@@ -47,7 +47,7 @@ class _MainPageState extends State<MainPage> {
           elevation: 0,
           type: BottomNavigationBarType.fixed,
           backgroundColor: Colors.transparent,
-          showSelectedLabels: true,
+          showSelectedLabels: false,
           showUnselectedLabels: false,
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.white,
@@ -98,11 +98,9 @@ class _MainPageState extends State<MainPage> {
           ],
         ),
       ),
-      body: SafeArea(
-        child: IndexedStack(
-          index: _currentIndex,
-          children: _widgetOptions,
-        ),
+      body: IndexedStack(
+        index: _currentIndex,
+        children: _widgetOptions,
       ),
     );
   }
