@@ -43,11 +43,56 @@ class _MainPageState extends State<MainPage> {
             tileMode: TileMode.clamp,
           ),
         ),
+        // child: NavigationBar(
+        //   backgroundColor: Colors.transparent,
+        //   labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
+        //   destinations: [
+        //     NavigationDestination(
+        //       icon: SvgPicture.asset('assets/icons/Home.svg'),
+        //       label: 'Home',
+        //       selectedIcon: SvgPicture.asset(
+        //         'assets/icons/Home_fill.svg',
+        //       ),
+        //     ),
+        //     NavigationDestination(
+        //       icon: SvgPicture.asset('assets/icons/Home.svg'),
+        //       label: 'Home',
+        //       selectedIcon: SvgPicture.asset(
+        //         'assets/icons/Home_fill.svg',
+        //       ),
+        //     ),
+        //     NavigationDestination(
+        //       icon: SvgPicture.asset('assets/icons/Home.svg'),
+        //       label: 'Home',
+        //       selectedIcon: SvgPicture.asset(
+        //         'assets/icons/Home_fill.svg',
+        //       ),
+        //     ),
+        //     NavigationDestination(
+        //       icon: SvgPicture.asset('assets/icons/Home.svg'),
+        //       label: 'Home',
+        //       selectedIcon: SvgPicture.asset(
+        //         'assets/icons/Home_fill.svg',
+        //       ),
+        //     ),
+        //     NavigationDestination(
+        //       icon: SvgPicture.asset('assets/icons/Home.svg'),
+        //       label: 'Home',
+        //       selectedIcon: SvgPicture.asset(
+        //         'assets/icons/Home_fill.svg',
+        //       ),
+        //     ),
+        //   ],
+        // ),
         child: BottomNavigationBar(
           elevation: 0,
           type: BottomNavigationBarType.fixed,
           backgroundColor: Colors.transparent,
-          showSelectedLabels: false,
+          showSelectedLabels: true,
+          selectedLabelStyle: const TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.bold,
+          ),
           showUnselectedLabels: false,
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.white,
