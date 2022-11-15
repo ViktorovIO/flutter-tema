@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:tema/screens/community_pages/page1.dart';
+import 'package:tema/components/community_person.dart';
 
 import '../const.dart';
 import 'dart:ui' as ui;
-
-import 'community_pages/page2.dart';
 
 class CommunityPage extends StatefulWidget {
   const CommunityPage({super.key});
@@ -28,12 +26,12 @@ class _CommunityPageState extends State<CommunityPage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
-              children: [
-                const Text(
+              children: const [
+                Text(
                   'Комьюнити',
                   style: TextStyle(),
                 ),
-                const Icon(
+                Icon(
                   Icons.expand_more,
                 ),
               ],
@@ -47,10 +45,21 @@ class _CommunityPageState extends State<CommunityPage> {
       ),
       body: PageView(
         controller: _pageController,
-        scrollDirection: Axis.vertical,
-        children: [
-          Page1(),
-          Page2(),
+        //scrollDirection: Axis.vertical,
+        children: const [
+          CommunityPerson(
+            imagePath: 'assets/images/girl1.jpg',
+            name: 'Катя',
+            age: 21,
+            about:
+                'Учусь на филологии, увлекаюсь социальными науками. Хочу прокачаться в психологии, ищу единомышленников.',
+          ),
+          CommunityPerson(
+            imagePath: 'assets/images/girl2.jpg',
+            name: 'Марина',
+            age: 26,
+            about: 'Люблю белые платья и гулять по утрам',
+          ),
         ],
       ),
     );

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tema/const.dart';
-import 'package:tema/screens/trailers.page.dart';
+import 'package:tema/screens/trailers_page.dart';
+import 'package:video_player/video_player.dart';
 
 import 'account_page.dart';
 import 'community_page.dart';
@@ -16,7 +17,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  int _currentIndex = 0;
+  int currentIndex = 0;
   final List<Widget> _widgetOptions = [
     const HomePage(),
     const CommunityPage(),
@@ -99,10 +100,10 @@ class _MainPageState extends State<MainPage> {
 
           onTap: (value) {
             setState(() {
-              _currentIndex = value;
+              currentIndex = value;
             });
           },
-          currentIndex: _currentIndex,
+          currentIndex: currentIndex,
           //selectedItemColor: Colors.white,
           items: [
             BottomNavigationBarItem(
@@ -144,7 +145,7 @@ class _MainPageState extends State<MainPage> {
         ),
       ),
       body: IndexedStack(
-        index: _currentIndex,
+        index: currentIndex,
         children: _widgetOptions,
       ),
     );
