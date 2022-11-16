@@ -8,12 +8,14 @@ import '../const.dart';
 import 'dart:ui' as ui;
 
 class Trailer extends StatefulWidget {
+  final String tagName;
   final String trailerPath;
   final String name;
   final String decription;
   final String title;
   const Trailer({
     super.key,
+    required this.tagName,
     required this.trailerPath,
     required this.name,
     required this.decription,
@@ -62,7 +64,7 @@ class _TrailerState extends State<Trailer> {
         //*video
         _videoPlayerController.value.isInitialized
             ? VisibilityDetector(
-                key: Key("unique key"),
+                key: const Key("unique key"),
                 onVisibilityChanged: (VisibilityInfo info) {
                   var visiblePercentage = info.visibleFraction * 100;
                   if (visiblePercentage != 0) {
@@ -109,65 +111,96 @@ class _TrailerState extends State<Trailer> {
           left: 16,
           child: Container(
             width: screenWidth - 16 - 16,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 16.0,
-                vertical: 16.0,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  //*name
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(35),
-                    child: BackdropFilter(
-                      filter: ui.ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 12.0,
-                          vertical: 6.0,
-                        ),
-                        decoration: BoxDecoration(
-                          color: Colors.black.withOpacity(0.3),
-                          borderRadius: BorderRadius.circular(35),
-                          //border: Border.all(color: Colors.grey, width: 1),
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            SvgPicture.asset('assets/icons/User.svg'),
-                            const SizedBox(width: 8.0),
-                            Text(
-                              widget.name,
-                              style: const TextStyle(
-                                fontSize: 16,
-                                color: Colors.white,
-                              ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                //*name
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(35),
+                  child: BackdropFilter(
+                    filter: ui.ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 12.0,
+                        vertical: 6.0,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.black.withOpacity(0.3),
+                        borderRadius: BorderRadius.circular(35),
+                        //border: Border.all(color: Colors.grey, width: 1),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          SvgPicture.asset('assets/icons/User.svg'),
+                          const SizedBox(width: 8.0),
+                          Text(
+                            widget.name,
+                            style: const TextStyle(
+                              fontSize: 16,
+                              color: Colors.white,
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
-                  const SizedBox(height: 22.0),
-                  //*title
-                  Text(
-                    widget.title,
-                    style: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.white,
-                    ),
+                ),
+                const SizedBox(height: 22.0),
+                //*title
+                Text(
+                  widget.title,
+                  style: const TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white,
                   ),
-                  const SizedBox(height: 16.0),
-                  Text(
-                    widget.decription,
-                    style: const TextStyle(
-                      fontSize: 16,
-                      color: Colors.white,
-                    ),
+                ),
+                const SizedBox(height: 16.0),
+                Text(
+                  widget.decription,
+                  style: const TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
                   ),
-                ],
+                ),
+              ],
+            ),
+          ),
+        ),
+
+        //*section name
+        //TODO wrong layout
+        Positioned(
+          top: 49.0,
+          right: 50.0,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(35),
+            child: BackdropFilter(
+              filter: ui.ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10.0,
+                  vertical: 8.0,
+                ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(35),
+                  gradient: LinearGradient(
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                    colors: [
+                      Color.fromARGB(255, 50, 17, 198).withOpacity(0.2),
+                      Color(0xffFF00C7).withOpacity(0.2),
+                      //kPageSecondColor.withOpacity(0.5),
+                    ],
+                  ),
+                ),
+                child: Text(
+                  widget.tagName,
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
               ),
             ),
           ),
@@ -175,8 +208,8 @@ class _TrailerState extends State<Trailer> {
 
         //*buttons
         Positioned(
-          right: 16,
-          bottom: 300,
+          right: 0,
+          bottom: screenHeight / 3,
           child: SvgPicture.asset('assets/icons/trailers_buttons.svg'),
           // child: Column(
           //   children: [

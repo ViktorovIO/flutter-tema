@@ -47,18 +47,26 @@ class _TrailersPageState extends State<TrailersPage> {
         scrollDirection: Axis.vertical,
         children: const [
           Trailer(
-            trailerPath: 'assets/trailers/kazanceva.mp4',
-            name: 'Ася Казанцева',
-            title: 'Почему мы видим мир по-разному?',
-            decription:
-                'Как мозг обманывает нас и заставляет совершать действия, которые на первый взгляд кажутся логичными?',
+            trailerPath: 'assets/trailers/IMG_5231.mp4',
+            tagName: 'Психология',
+            name: 'Лина Дианова',
+            title: 'О пассивной агрессии',
+            decription: 'Откуда появляется пассивная агрессия',
           ),
           Trailer(
-            trailerPath: 'assets/trailers/surdin.mp4',
-            name: 'Владимир Сурдин',
-            title: 'Загадочные сигналы из космоса: это инопланетяне?',
+            trailerPath: 'assets/trailers/IMG_5239.mp4',
+            name: 'Николай Жаринов',
+            tagName: 'Искусство',
+            title: 'Микеланджело был несчастен?',
+            decription: 'О жизни и творчестве величайшего скульптора',
+          ),
+          Trailer(
+            trailerPath: 'assets/trailers/IMG_5241.mp4',
+            name: 'Дмитрий Алексеев',
+            tagName: 'Бизнес',
+            title: 'Создатель DNS о первых деньгах',
             decription:
-                'В каких частях Вселенной перспективнее всего искать «братьев по разуму»? Какими экстравагантными проектами ученые пытаются привлечь внимание инопланетян?',
+                'Миллиардер Дмитрий Алексеев о том, как создал компанию DNS',
           ),
         ],
       ),
