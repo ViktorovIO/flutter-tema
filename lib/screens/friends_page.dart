@@ -25,10 +25,14 @@ class _FriendsPageState extends State<FriendsPage> {
             colors: [
               kPageFirstColor,
               kPageFirstColor,
-              kPageSecondColor,
-              kPageSecondColor,
-              kPageSecondColor,
-              kPageSecondColor,
+              Color(0xff370252),
+              Color(0xff370252),
+              Color(0xff370252),
+              Color(0xff370252),
+              // kPageSecondColor,
+              // kPageSecondColor,
+              // kPageSecondColor,
+              // kPageSecondColor,
             ],
           ),
         ),
@@ -68,7 +72,7 @@ class _FriendsPageState extends State<FriendsPage> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  FriendPost(
+                  const FriendPost(
                     index: 1,
                     imageUrl: 'assets/images/char1.png',
                     title:
@@ -77,7 +81,7 @@ class _FriendsPageState extends State<FriendsPage> {
                     starsCount: '10k',
                     sendsCount: '3k',
                   ),
-                  FriendPost(
+                  const FriendPost(
                     index: 2,
                     imageUrl: 'assets/images/char2.png',
                     title:
@@ -86,7 +90,7 @@ class _FriendsPageState extends State<FriendsPage> {
                     starsCount: '800',
                     sendsCount: '127',
                   ),
-                  FriendPost(
+                  const FriendPost(
                     index: 3,
                     imageUrl: 'assets/images/char1.png',
                     title:
@@ -95,7 +99,7 @@ class _FriendsPageState extends State<FriendsPage> {
                     starsCount: '456',
                     sendsCount: '134',
                   ),
-                  FriendPost(
+                  const FriendPost(
                     index: 4,
                     imageUrl: 'assets/images/char2.png',
                     title:
@@ -168,9 +172,9 @@ class FriendPost extends StatelessWidget {
                     children: [
                       Text(
                         title,
-                        maxLines: 3,
+                        maxLines: 2,
                         overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
@@ -189,7 +193,7 @@ class FriendPost extends StatelessWidget {
                                   'assets/icons/friends_heart.svg'),
                               Text(
                                 heartsCount,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Colors.white,
                                 ),
                               ),
@@ -203,7 +207,7 @@ class FriendPost extends StatelessWidget {
                               SvgPicture.asset('assets/icons/friends_star.svg'),
                               Text(
                                 starsCount,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Colors.white,
                                 ),
                               ),
@@ -217,7 +221,7 @@ class FriendPost extends StatelessWidget {
                               SvgPicture.asset('assets/icons/friends_send.svg'),
                               Text(
                                 sendsCount,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Colors.white,
                                 ),
                               ),
