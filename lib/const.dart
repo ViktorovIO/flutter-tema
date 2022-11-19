@@ -9,5 +9,6 @@ const kPageFirstColor = Color(0xFF044388);
 //const kPageSecondColor = Color.fromARGB(255, 47, 15, 54);
 const kPageSecondColor = Color(0xff051323);
 const kTextMainColor = Color(0xffE5E6F0);
-final kBorderRadiusCircularDefault = BorderRadius.circular(13.0);
+final kBorderRadiusCircularDefault = BorderRadius.circular(6.0);
 const kLectureCardWidth = 220.0;
+final kBorderColor = Colors.grey.withOpacity(0.3);

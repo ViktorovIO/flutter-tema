@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tema/screens/main_page.dart';
+import 'package:tema/screens/splash_page.dart';
 
 import 'const.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
           //scrolledUnderElevation: 0.5,
         ),
       ),
-      home: const MainPage(),
+      home: const SplashPage(),
     );
   }
 }

@@ -36,7 +36,7 @@ class LectureBig extends StatelessWidget {
                   children: [
                     //*name
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(25),
+                      borderRadius: kBorderRadiusCircularDefault,
                       child: BackdropFilter(
                         filter: ui.ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
                         child: Container(
@@ -46,7 +46,7 @@ class LectureBig extends StatelessWidget {
                           ),
                           decoration: BoxDecoration(
                             color: Colors.black.withOpacity(0.3),
-                            borderRadius: BorderRadius.circular(25),
+                            borderRadius: kBorderRadiusCircularDefault,
                           ),
                           child: Text(
                             'Дани Трабун',
@@ -63,7 +63,7 @@ class LectureBig extends StatelessWidget {
 
                     //*Autor
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(25),
+                      borderRadius: kBorderRadiusCircularDefault,
                       child: BackdropFilter(
                         filter: ui.ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
                         child: Container(
@@ -79,7 +79,7 @@ class LectureBig extends StatelessWidget {
                                 Color.fromARGB(255, 96, 4, 90).withOpacity(0.7),
                               ],
                             ),
-                            borderRadius: BorderRadius.circular(25),
+                            borderRadius: kBorderRadiusCircularDefault,
                           ),
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
@@ -106,7 +106,7 @@ class LectureBig extends StatelessWidget {
                 bottom: 8,
                 right: 8,
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(25),
+                  borderRadius: kBorderRadiusCircularDefault,
                   child: BackdropFilter(
                     filter: ui.ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
                     child: Container(
@@ -116,7 +116,7 @@ class LectureBig extends StatelessWidget {
                       ),
                       decoration: BoxDecoration(
                         color: Colors.black.withOpacity(0.3),
-                        borderRadius: BorderRadius.circular(25),
+                        borderRadius: kBorderRadiusCircularDefault,
                       ),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,

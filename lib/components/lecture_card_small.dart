@@ -43,7 +43,7 @@ class LectureCardSmall extends StatelessWidget {
                   bottom: 8,
                   left: 8,
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(25),
+                    borderRadius: kBorderRadiusCircularDefault,
                     child: BackdropFilter(
                       filter: ui.ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
                       child: Container(
@@ -53,7 +53,7 @@ class LectureCardSmall extends StatelessWidget {
                         ),
                         decoration: BoxDecoration(
                           color: Colors.black.withOpacity(0.3),
-                          borderRadius: BorderRadius.circular(25),
+                          borderRadius: kBorderRadiusCircularDefault,
                         ),
                         child: Text(
                           lector,
@@ -71,7 +71,7 @@ class LectureCardSmall extends StatelessWidget {
                   bottom: 8,
                   right: 8,
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(25),
+                    borderRadius: kBorderRadiusCircularDefault,
                     child: BackdropFilter(
                       filter: ui.ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
                       child: Container(
@@ -81,7 +81,7 @@ class LectureCardSmall extends StatelessWidget {
                         ),
                         decoration: BoxDecoration(
                           color: Colors.black.withOpacity(0.3),
-                          borderRadius: BorderRadius.circular(25),
+                          borderRadius: kBorderRadiusCircularDefault,
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,

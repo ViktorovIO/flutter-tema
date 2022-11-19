@@ -116,7 +116,7 @@ class _TrailerState extends State<Trailer> {
               children: [
                 //*name
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(35),
+                  borderRadius: kBorderRadiusCircularDefault,
                   child: BackdropFilter(
                     filter: ui.ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
                     child: Container(
@@ -125,8 +125,11 @@ class _TrailerState extends State<Trailer> {
                         vertical: 6.0,
                       ),
                       decoration: BoxDecoration(
+                        border: Border.all(
+                          color: kBorderColor,
+                        ),
                         color: Colors.black.withOpacity(0.3),
-                        borderRadius: BorderRadius.circular(35),
+                        borderRadius: kBorderRadiusCircularDefault,
                         //border: Border.all(color: Colors.grey, width: 1),
                       ),
                       child: Row(
@@ -172,10 +175,10 @@ class _TrailerState extends State<Trailer> {
         //*section name
         //TODO wrong layout
         Positioned(
-          top: 49.0,
+          top: 48.0,
           right: 50.0,
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(35),
+            borderRadius: kBorderRadiusCircularDefault,
             child: BackdropFilter(
               filter: ui.ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
               child: Container(
@@ -184,7 +187,10 @@ class _TrailerState extends State<Trailer> {
                   vertical: 8.0,
                 ),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(35),
+                  border: Border.all(
+                    color: kBorderColor,
+                  ),
+                  borderRadius: kBorderRadiusCircularDefault,
                   gradient: LinearGradient(
                     begin: Alignment.centerLeft,
                     end: Alignment.centerRight,
@@ -210,7 +216,30 @@ class _TrailerState extends State<Trailer> {
         Positioned(
           right: 0,
           bottom: screenHeight / 3,
-          child: SvgPicture.asset('assets/icons/trailers_buttons.svg'),
+          //child: SvgPicture.asset('assets/icons/trailers_buttons.svg'),
+          // child: ClipRRect(
+          //   borderRadius: BorderRadius.circular(10),
+          //   child: BackdropFilter(
+          //     filter: ui.ImageFilter.blur(
+          //       sigmaX: 3.0,
+          //       sigmaY: 3.0,
+          //     ),
+          //     child: Container(
+          //       width: 56,
+          //       height: 56,
+          //       decoration: BoxDecoration(
+          //         border: Border.all(
+          //           color: kBorderColor,
+          //           width: 2,
+          //         ),
+          //         color: const Color(0xff848484).withOpacity(0.1),
+          //         shape: BoxShape.circle,
+          //       ),
+          //       child: Icon(Icons.cabin),
+          //     ),
+          //   ),
+          // ),
+
           // child: Column(
           //   children: [
           //     SvgPicture.asset('assets/icons/trailers_like_button.svg'),
@@ -218,6 +247,12 @@ class _TrailerState extends State<Trailer> {
           //     SvgPicture.asset('assets/icons/trailers_send_button.svg'),
           //   ],
           // ),
+
+          child: Image.asset(
+            'assets/icons/buttons.png',
+            color: Colors.white.withOpacity(0.8),
+            colorBlendMode: BlendMode.modulate,
+          ),
         ),
       ],
     );

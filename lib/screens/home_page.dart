@@ -40,6 +40,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.transparent,
         extendBodyBehindAppBar: true,
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: kPageFirstColor,
           systemOverlayStyle:
               const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
