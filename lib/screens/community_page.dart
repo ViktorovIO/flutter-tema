@@ -29,7 +29,7 @@ class _CommunityPageState extends State<CommunityPage> {
             Row(
               children: const [
                 Text(
-                  'Комьюнити',
+                  'Community',
                   style: TextStyle(),
                 ),
                 Icon(
@@ -74,7 +74,7 @@ class _CommunityPageState extends State<CommunityPage> {
             about: 'I dream of a date at the Eiffel Tower 🫶🏻',
           ),
           CommunityPerson(
-            imagePath: 'liam',
+            imagePath: 'assets/images/community/liam.jpg',
             name: 'Liam',
             age: 18,
             about: 'Tattoo master, instead of wedding rings, I will fill us with tattoos on our fingers 💓',
