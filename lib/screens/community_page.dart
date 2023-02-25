@@ -49,17 +49,35 @@ class _CommunityPageState extends State<CommunityPage> {
         //scrollDirection: Axis.vertical,
         children: const [
           CommunityPerson(
-            imagePath: 'assets/images/girl1.jpg',
-            name: 'Катя',
-            age: 21,
+            imagePath: 'assets/images/community/mason.jpg',
+            name: 'Mason',
+            age: 19,
             about:
-                'Учусь на филологии, увлекаюсь социальными науками. Хочу прокачаться в психологии, ищу единомышленников.',
+                'I am for a person with whom we will watch a lecture on how the future will look like..',
           ),
           CommunityPerson(
-            imagePath: 'assets/images/girl2.jpg',
-            name: 'Марина',
-            age: 26,
-            about: 'Люблю белые платья и гулять по утрам',
+            imagePath: 'assets/images/community/noah.jpg',
+            name: 'Noah',
+            age: 21,
+            about: '♌️,model',
+          ),
+          CommunityPerson(
+            imagePath: 'assets/images/community/meaghan.jpg',
+            name: 'Meaghan',
+            age: 19,
+            about: 'Creative director of Oral b. Brush your teeth before our date 😂',
+          ),
+          CommunityPerson(
+            imagePath: 'assets/images/community/kate.jpg',
+            name: 'Kate',
+            age: 20,
+            about: 'I dream of a date at the Eiffel Tower 🫶🏻',
+          ),
+          CommunityPerson(
+            imagePath: 'liam',
+            name: 'Liam',
+            age: 18,
+            about: 'Tattoo master, instead of wedding rings, I will fill us with tattoos on our fingers 💓',
           ),
         ],
       ),
