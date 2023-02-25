@@ -26,7 +26,7 @@ class _TrailersPageState extends State<TrailersPage> {
             Row(
               children: const [
                 Text(
-                  'Трейлеры',
+                  'Trailers',
                   style: TextStyle(
                     color: Colors.white,
                   ),
@@ -48,26 +48,26 @@ class _TrailersPageState extends State<TrailersPage> {
         scrollDirection: Axis.vertical,
         children: const [
           Trailer(
-            trailerPath: 'assets/trailers/IMG_5231.mp4',
-            tagName: 'Психология',
-            name: 'Лина Дианова',
-            title: 'О пассивной агрессии',
-            decription: 'Откуда появляется пассивная агрессия',
+            trailerPath: 'assets/trailers/musk.mp4',
+            tagName: 'Business',
+            name: 'Elon Musk',
+            title: '«What the future will look like?»',
+            decription: 'Elon Musk envisions the future for the world.',
           ),
           Trailer(
-            trailerPath: 'assets/trailers/IMG_5239.mp4',
-            name: 'Николай Жаринов',
-            tagName: 'Искусство',
-            title: 'Микеланджело был несчастен?',
-            decription: 'О жизни и творчестве величайшего скульптора',
+            trailerPath: 'assets/trailers/zuckerberg.mp4',
+            name: 'Mark Zuckerberg',
+            tagName: 'Business',
+            title: '«Identify in Metaverse»',
+            decription: 'Mark Zuckerberg is CEO of Meta, formerly Facebook…',
           ),
           Trailer(
-            trailerPath: 'assets/trailers/IMG_5241.mp4',
-            name: 'Дмитрий Алексеев',
-            tagName: 'Бизнес',
-            title: 'Создатель DNS о первых деньгах',
+            trailerPath: 'assets/trailers/gopnik.mp4',
+            name: 'Alison Gopnik',
+            tagName: 'Psychology',
+            title: '«What goes on in a child\'s head?»',
             decription:
-                'Миллиардер Дмитрий Алексеев о том, как создал компанию DNS',
+                '“Babies and young children are an institution for human exploration and development,” says psychologist Alison Gopnik…',
           ),
         ],
       ),
