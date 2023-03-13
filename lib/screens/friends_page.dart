@@ -50,7 +50,7 @@ class _FriendsPageState extends State<FriendsPage> {
                 Row(
                   children: [
                     const Text(
-                      'Лента друзей',
+                      'Friends feed',
                       style: TextStyle(
                         color: kTextMainColor,
                       ),
@@ -76,7 +76,7 @@ class _FriendsPageState extends State<FriendsPage> {
                     index: 1,
                     imageUrl: 'assets/images/char1.png',
                     title:
-                        'Что-то грандиозное случилось сегодня! Если бы вы знали как долго я искала',
+                        'Something big happened today! If you knew how long I\'ve been searching...',
                     heartsCount: '16k',
                     starsCount: '10k',
                     sendsCount: '3k',
@@ -85,7 +85,7 @@ class _FriendsPageState extends State<FriendsPage> {
                     index: 2,
                     imageUrl: 'assets/images/char2.png',
                     title:
-                        'Хочу поделиться с потрясающей новостью! Сегодня исполнилось ровно год с тех пор как моя жизнь круто изменилась!',
+                        'I want to share amazing news! Today marks exactly one year since my life has changed dramatically!',
                     heartsCount: '1k',
                     starsCount: '800',
                     sendsCount: '127',

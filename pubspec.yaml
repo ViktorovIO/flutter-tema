@@ -70,6 +70,7 @@ flutter:
     - assets/images/
     - assets/images/community/
     - assets/images/main/
+    - assets/images/char/
     - assets/trailers/
     - assets/splash/
   #   - images/a_dot_ham.jpeg

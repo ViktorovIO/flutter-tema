@@ -122,11 +122,26 @@ class _HomePageState extends State<HomePage> {
 
               const SizedBox(height: 16.0),
 
-              const TitleBlock(text: 'Рекомендовано'),
+              const TitleBlock(text: 'Recommended'),
 
-              const LectureBig(),
-              const LectureBig(),
-              const LectureBig(),
+              const LectureBig(
+                imagePath: 'assets/images/main/DwaneJohnson.jpg',
+                title: 'Author\'s cource',
+                description: 'The famous actor talks about depression and his experience…',
+                lector: 'Dwayne Johnson',
+              ),
+              const LectureBig(
+                imagePath: 'assets/images/main/ElonMusk.jpg',
+                title: 'Author\'s cource',
+                description: 'Elon Musk envisions the future for the world.',
+                lector: 'Elon Musk',
+              ),
+              const LectureBig(
+                imagePath: 'assets/images/main/RobertDowneyJr.jpg',
+                title: 'Author\'s cource',
+                description: 'Talks about living a very public life',
+                lector: 'Robert Downey Jr.',
+              ),
 
               //*bottom navigation height
               const SizedBox(height: 50),

@@ -5,7 +5,16 @@ import '../const.dart';
 import 'dart:ui' as ui;
 
 class LectureBig extends StatelessWidget {
+  final String imagePath;
+  final String title;
+  final String description;
+  final String lector;
+
   const LectureBig({
+    required this.imagePath,
+    required this.title,
+    required this.description,
+    required this.lector,
     Key? key,
   }) : super(key: key);
 
@@ -22,7 +31,7 @@ class LectureBig extends StatelessWidget {
               ClipRRect(
                 borderRadius: kBorderRadiusCircularDefault,
                 child: Image.asset(
-                  'assets/images/trabun.png',
+                  imagePath,
                   width: double.infinity,
                   fit: BoxFit.cover,
                 ),
@@ -49,7 +58,7 @@ class LectureBig extends StatelessWidget {
                             borderRadius: kBorderRadiusCircularDefault,
                           ),
                           child: Text(
-                            'Дани Трабун',
+                            lector,
                             style: TextStyle(
                               color: kTextMainColor,
                               fontWeight: FontWeight.w400,
@@ -87,7 +96,7 @@ class LectureBig extends StatelessWidget {
                               SvgPicture.asset('assets/icons/Diamond.svg'),
                               const SizedBox(width: 3.0),
                               Text(
-                                'Авторский курс',
+                                title,
                                 style: TextStyle(
                                   color: kTextMainColor,
                                   fontWeight: FontWeight.w400,
@@ -150,7 +159,7 @@ class LectureBig extends StatelessWidget {
             //top: 16.0,
           ),
           child: Text(
-            'Метавселенная: новый вектор коммуникации и нетворкинга',
+            description,
             style: TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w500,
